@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#players-on-server {
+    text-align: center;
+}
+
+#h {
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #143601;
+    font-size: 24px;
+}
+
+#h::after { 
+    content: '';
+    text-align: center;
+    display: block;
+    border: 1px solid #4361ee;
+}
+
+#container {
+    margin: auto;
+    margin-top: 50px;
+    width: 306px;
+    background-color: #f0f0f0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 3px;
+    display: grid;
+    border: 1px solid #ddd;
+} 
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: azure;
+    cursor: pointer;
+}
+
+button {
+    text-align: center;
+    padding: 15px;
+    color: black;
+    font-size: 20px;
+    background-color: white;
+    border: 1px solid black;
+    outline: none;
+    transition: all .3s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+#btn-container {
+    text-align: center;
+    margin: 20px;
+}
+
+#room-info, #user-disconnect-info {
+    text-align: center;
+    font-size: 18px;
+}
+
+#rooms-container {
+    text-align: center;
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+#turn-info {
+    text-align: center;
+}
+
+#err-info {
+    text-align: center;
+}
+
+#disconnect-message, #disconnect-message-no-win, #disconnect-message-win  {
+    display: none;
+    text-align: center;
+}
+
+@media(min-width: 1024px) {
+    #chat-container {
+        position: absolute;
+        width: 20vw;
+        background-color: #efefef;
+        margin: 20px;
+        padding: 15px;
+        margin-top: 0;
+    }
+
+    #chat-headline {
+        width: 20vw;
+        text-align: center;
+        margin: 20px;
+        padding: 15px;
+        margin-bottom: 0;
+        border: 1px solid black;
+    }
+
+    #msg {
+        display: inline-block;
+    }
+
+    #date {
+        float: right;
+    }
+
+    .message {
+        display: block;
+        border: 1px solid white;
+        position: relative;
+        padding: 5px;
+    }
+    #chat {
+        width: 25vw;
+        margin: 25px;
+    }
+}
+
+@media(max-width: 1023px) {
+    #chat-container {
+        width: 60vw;
+        background-color: #efefef;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    #chat-headline {
+        width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin: 10px;
+        padding: 15px;
+        margin-bottom: 0;
+        border: 1px solid black;
+    }
+
+    #msg {
+        display: inline-block;
+    }
+    #date {
+        float: right;
+    }
+    .message {
+        display: block;
+        border: 1px solid white;
+        padding: 5px;
+        position: relative;
+        overflow: auto;
+    }
+
+    #submission {
+        width: 100%;
+        margin-left: 5%;
+    }
+    #send {
+        width: 70%;
+    }
+    
+    #send, #submit-send {
+        display: inline-block;
+        padding: 5px;
+        margin: 2px;
+    }
+
+    #chat {
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#sender {
+    font-size: 8px;
+    position: absolute;
+    top: 0;
+}
+
+#submission {
+    width: 100%;
+    margin-left: 5%;
+}
+#send {
+    width: 70%;
+}
+
+#send, #submit-send {
+    display: inline-block;
+    padding: 5px;
+    margin: 2px;
+}
+
+#winner {
+    color: red;
+}

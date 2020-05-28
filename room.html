@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"
+        integrity="sha256-ijqLssetA1NMNjZ+w1zaUafQQLm4IW5OoM8O+4tatME=" crossorigin="anonymous"></script>
+    <script defer src="https://socket-tic-tac-toe-server.herokuapp.com/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="h">
+        <h1>Kółko i krzyżyk</h1>
+    </div>
+    <div id="board">
+        <div id="room-info">
+            <p id="r-info"></p>
+        </div>
+        <p id="err-info"></p>
+        <p id="turn-info"></p>
+        <div id="chat">
+            <div id="submission">
+                <form>
+                    <input type="text" id="send" placeholder="Napisz wiadomość" />
+                    <input type="submit" id="submit-send" value="wyślij" />
+                </form>
+            </div>
+            <div id="chat-headline">
+                chat
+            </div>
+            <div id="chat-container"></div>            
+        </div>
+        <div id="container">
+            <div class="box" id="0"></div>
+            <div class="box" id="1"></div>
+            <div class="box" id="2"></div>
+            <div class="box" id="3"></div>
+            <div class="box" id="4"></div>
+            <div class="box" id="5"></div>
+            <div class="box" id="6"></div>
+            <div class="box" id="7"></div>
+            <div class="box" id="8"></div>
+        </div>
+
+        <p id="disconnect-message-win">Wygrał <span id="winner"></span>, koniec gry nastąpi za: <span id="disconnect-counter-win"></span></p>
+        <p id="disconnect-message-no-win">Nikt nie wygrał, koniec gry nastąpi za: <span id="disconnect-counter-no-win"></span></p>
+        <p id="disconnect-message">Przeciwnik opuścił pokój, koniec gry nastąpi za: <span id="disconnect-counter"></span></p>
+        <div id="btn-container">
+            <button id="leave">opuść pokój</button>
+        </div>
+        <div id="players-on-server">
+            <p>Gracze na serwerze:</p>
+            <ul id="players-on-server-list"></ul>
+        </div>
+    </div>
+
+    <script defer src="script.js"></script>
+</body>
+
+</html>

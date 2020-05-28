@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="h">
+        <h1>Kółko i krzyżyk</h1>
+    </div>
+    <div id="err"></div>
+    <div id="message-container"></div>
+    <div id="rooms-container">
+        <form action="room.html">
+            <input type="text" name="username" placeholder="podaj imię" />
+            <select name="room">
+                <option value="room1">pokój 1</option>
+                <option value="room2">pokój 2</option>
+                <option value="room3">pokój 3</option>
+                <option value="room4">pokój 4</option>
+                <option value="room5">pokój 5</option>
+                <option value="room6">pokój 6</option>
+                <option value="room7">pokój 7</option>
+                <option value="room8">pokój 8</option>
+                <option value="room9">pokój 9</option>
+                <option value="room10">pokój 10</option>
+            </select>
+            <input type="submit" value="dołącz" id="submit">
+        </form>
+        <p>Gracze w pokojach: </p>
+        <ul id="players-in-room"></ul>
+    </div>
+    <script src="displayRooms.js"></script>
+</body>
+</html>
