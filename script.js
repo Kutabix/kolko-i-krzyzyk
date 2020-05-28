@@ -1,5 +1,5 @@
 const serverUrl = 'https://socket-tic-tac-toe-server.herokuapp.com';
-const clientUrl = 'http://127.0.0.1:5500/client/index.html';
+const clientUrl = 'https://kutabix.github.io/tic-tac-toe/';
 
 let socket = io(serverUrl);
 
